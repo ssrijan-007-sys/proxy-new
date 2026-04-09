@@ -39,6 +39,9 @@ async function getShiprocketToken() {
   );
 
   const data = await res.json();
+  console.log("EMAIL:", SHIPROCKET_EMAIL);
+console.log("PASSWORD:", SHIPROCKET_PASSWORD);
+console.log("SHIPROCKET RESPONSE:", data);
 
   shiprocketToken = data.token;
   tokenExpiry = now + 230 * 60 * 60 * 1000;
